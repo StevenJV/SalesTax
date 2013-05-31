@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sales Tax Calculator</title>
+    <style>
+        body
+        {
+            font-family: 'Lucida Grande' , Geneva, Verdana, Arial, Helvetica, sans-serif;
+        }
+        h1
+        {
+            font-weight: bold;
+            font-size: 2.0em;
+            line-height: 1.8em;
+            font-family: Tahoma, Veranda, Geneva, Arial, Helvetica, sans-serif;
+            font-variant: small-caps;
+        }
+        label
+        {
+            width: 100px;
+            color: gray;
+            float: left;
+        }
+    </style>
+    <script type="text/javascript">
+        function calcualteTax() {
+            var theQty = document.getElementById("qty").value;
+            var thePrice = document.getElementById("price").value;
+            var theRate = document.getElementById("rate").value;
+            var theSubtotal = theQty * thePrice;
+            var theTax = Math.floor(theSubtotal * theRate) / 100;
+            document.getElementById("tax").value = theTax;
+            var theTotal = theSubtotal + theTax;
+            document.getElementById("total").value = theTotal;
+        }
+    </script>
+</head>
+<body>
+    <h1>
+        Sales Tax Calculator</h1>
+    <p>
+        <label for="qty">
+            Quantity:
+        </label>
+        <input type="text" id="qty"  />
+    </p>
+    <p>
+        <label for="price">
+            Price:
+        </label>
+        <input type="text"  id="price"  />
+    </p>
+    <p>
+        <label for="rate">
+            Tax rate:
+        </label>
+        <input type="text" id="rate"  />
+        percent
+    </p>
+    <p>
+        <button id="Calculate" value="Calculate" onclick="calcualteTax(this.form)">
+            Calculate Tax</button>
+    </p>
+    <p>
+        <label for="tax">
+            Tax:
+        </label>
+        <input id="tax" type="text" />
+    </p>
+    <p>
+        <label for="total">
+            Total:
+        </label>
+        <input id="total" type="text" />
+    </p>
+</body>
+</html>

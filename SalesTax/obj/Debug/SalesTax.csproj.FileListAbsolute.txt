@@ -1,0 +1,5 @@
+D:\projects\SalesTax\SalesTax\bin\SalesTax.dll
+D:\projects\SalesTax\SalesTax\bin\SalesTax.pdb
+D:\projects\SalesTax\SalesTax\obj\Debug\SalesTax.dll
+D:\projects\SalesTax\SalesTax\obj\Debug\SalesTax.pdb
+D:\projects\SalesTax\SalesTax\obj\Debug\SalesTax.csprojResolveAssemblyReference.cache
